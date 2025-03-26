@@ -415,3 +415,62 @@ header {
 .footer-bottom span {
   color: #757575;
 }
+
+/* Movie and TV Show Cards */
+.content-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 20px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.content-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.content-card {
+  width: 250px;
+  background: rgba(0, 0, 0, 0.75);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.content-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+}
+
+.content-card img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+}
+
+.card-footer {
+  padding: 15px;
+}
+
+.card-title {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.card-details {
+  font-size: 0.9rem;
+  color: #999;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-rating {
+  color: #e50914;
+  font-weight: bold;
+}
