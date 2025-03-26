@@ -38,7 +38,7 @@ body::before {
 header {
   width: 100%;
   height: 70px;
-  background: transparent;
+  background: rgba(0, 0, 0, 0.9);
   position: fixed;
   top: 0;
   left: 0;
@@ -48,8 +48,8 @@ header {
   padding: 20px 4%;
   z-index: 999;
   transition: background-color 0.3s ease;
-  border-radius: 5px;
-  padding-top: 2.7rem;
+  border-radius: 0;
+  padding-top: 1rem;
 }
 
 .logo {
@@ -59,7 +59,7 @@ header {
 }
 
 .logo img {
-  height: 9rem;
+  height: 4rem;
   width: auto;
   display: block;
 }
@@ -202,9 +202,9 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   text-align: center;
-  padding: 90px 20px 20px;
+  padding: 120px 20px 20px;
 }
 
 .content h2 {
@@ -473,4 +473,15 @@ header {
 .card-rating {
   color: #e50914;
   font-weight: bold;
+}
+
+/* Add a new class for content pages */
+.content-page .hero {
+  padding-top: 100px;
+  justify-content: flex-start;
+}
+
+.content-page .content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
 }
