@@ -296,11 +296,13 @@ header {
   font-weight: 500;
   margin: 24px 0 12px;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all 0.7s ease;
 }
 
 .signin-form button:hover {
-  background: #f40612;
+  background: transparent;
+  transform: scale(1.05);
+  box-shadow: 0 0 15px 0 rgba(17, 135, 174, 0.5);
 }
 
 .remember-me {
