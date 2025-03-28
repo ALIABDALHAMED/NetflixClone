@@ -52,6 +52,7 @@
               data-genre="Crime, Drama"
               data-year="2008-2013"
               data-poster="/assets/tvshows/BreakingBad.jpg"
+              data-video="/Vid_assets/BreakingBad.mp4"
               onclick="showTVDetails(this)"
             >
               <img src="/assets/tvshows/BreakingBad.jpg" alt="Breaking Bad" />
@@ -63,7 +64,15 @@
                 </div>
               </div>
             </div>
-            <div class="content-card">
+            <div
+              class="content-card"
+              data-title="Game of Thrones"
+              data-genre="Fantasy, Drama"
+              data-year="2011-2019"
+              data-poster="/assets/tvshows/gameofthrones.jpg"
+              data-video="/assets/Vid_assets/GameofThronesOpeningCredits.mp4"
+              onclick="showTVDetails(this)"
+            >
               <img
                 src="/assets/tvshows/gameofthrones.jpg"
                 alt="Game of Thrones"
@@ -76,7 +85,15 @@
                 </div>
               </div>
             </div>
-            <div class="content-card">
+            <div
+              class="content-card"
+              data-title="House Of The Dragon"
+              data-genre="Fantasy, Drama"
+              data-year="2022-Present"
+              data-poster="/assets/tvshows/houseofthedragon.jpg"
+              data-video="/assets/videos/hotd.mp4"
+              onclick="showTVDetails(this)"
+            >
               <img
                 src="/assets/tvshows/houseofthedragon.jpg"
                 alt="House of the Dragon"
@@ -89,10 +106,18 @@
                 </div>
               </div>
             </div>
-            <div class="content-card">
+            <div
+              class="content-card"
+              data-title="Better Call Saul"
+              data-genre="Crime, Drama"
+              data-year="2015-2022"
+              data-poster="/assets/tvshows/bettercallsual.jpg"
+              data-video="/assets/videos/bcs.mp4"
+              onclick="showTVDetails(this)"
+            >
               <img
                 src="/assets/tvshows/bettercallsual.jpg"
-                alt="better call saul"
+                alt="Better Call Saul"
               />
               <div class="card-footer">
                 <div class="card-title">Better Call Saul</div>
@@ -102,7 +127,15 @@
                 </div>
               </div>
             </div>
-            <div class="content-card">
+            <div
+              class="content-card"
+              data-title="Moon Knight"
+              data-genre="Fantasy, Action"
+              data-year="2022-Present"
+              data-poster="/assets/tvshows/moonknight.jpg"
+              data-video="/assets/videos/moonknight.mp4"
+              onclick="showTVDetails(this)"
+            >
               <img src="/assets/tvshows/moonknight.jpg" alt="Moon Knight" />
               <div class="card-footer">
                 <div class="card-title">Moon Knight</div>
@@ -114,27 +147,53 @@
             </div>
           </div>
           <div class="content-row">
-            <div class="content-card">
+            <div
+              class="content-card"
+              data-title="Chernobyl"
+              data-genre="Drama, History"
+              data-year="2019"
+              data-poster="/assets/tvshows/chernobyl.jpg"
+              data-video="/assets/videos/chernobyl.mp4"
+              onclick="showTVDetails(this)"
+            >
               <img src="/assets/tvshows/chernobyl.jpg" alt="Chernobyl" />
               <div class="card-footer">
                 <div class="card-title">Chernobyl</div>
                 <div class="card-details">
-                  <span>Sci-Fi, Drama</span>
+                  <span>Drama, History</span>
                   <span class="card-rating">2019</span>
                 </div>
               </div>
             </div>
-            <div class="content-card">
+
+            <div
+              class="content-card"
+              data-title="Dexter"
+              data-genre="Crime, Mystery"
+              data-year="2011-Present"
+              data-poster="/assets/tvshows/dexter.webp"
+              data-video="/assets/videos/dexter.mp4"
+              onclick="showTVDetails(this)"
+            >
               <img src="/assets/tvshows/dexter.webp" alt="Dexter" />
               <div class="card-footer">
                 <div class="card-title">Dexter</div>
                 <div class="card-details">
-                  <span> Crime, Mystery</span>
+                  <span>Crime, Mystery</span>
                   <span class="card-rating">2011-Present</span>
                 </div>
               </div>
             </div>
-            <div class="content-card">
+
+            <div
+              class="content-card"
+              data-title="The Walking Dead"
+              data-genre="Horror, Thriller"
+              data-year="2010-2022"
+              data-poster="/assets/tvshows/TWD.webp"
+              data-video="/assets/videos/twd.mp4"
+              onclick="showTVDetails(this)"
+            >
               <img src="/assets/tvshows/TWD.webp" alt="The Walking Dead" />
               <div class="card-footer">
                 <div class="card-title">The Walking Dead</div>
@@ -144,7 +203,16 @@
                 </div>
               </div>
             </div>
-            <div class="content-card">
+
+            <div
+              class="content-card"
+              data-title="Succession"
+              data-genre="Drama"
+              data-year="2018-2023"
+              data-poster="/assets/tvshows/succession.png"
+              data-video="/assets/videos/succession.mp4"
+              onclick="showTVDetails(this)"
+            >
               <img src="/assets/tvshows/succession.png" alt="Succession" />
               <div class="card-footer">
                 <div class="card-title">Succession</div>
@@ -154,7 +222,16 @@
                 </div>
               </div>
             </div>
-            <div class="content-card">
+
+            <div
+              class="content-card"
+              data-title="The Last of Us"
+              data-genre="Drama, Horror"
+              data-year="2023-Present"
+              data-poster="/assets/tvshows/thelastofus.webp"
+              data-video="/assets/videos/tlou.mp4"
+              onclick="showTVDetails(this)"
+            >
               <img
                 src="/assets/tvshows/thelastofus.webp"
                 alt="The Last of Us"
@@ -169,17 +246,34 @@
             </div>
           </div>
           <div class="content-row">
-            <div class="content-card">
-              <img src="/assets/tvshows/thepenguin.webp" alt="The Pinguins" />
+            <div
+              class="content-card"
+              data-title="The Penguin"
+              data-genre="Crime, Drama"
+              data-year="2024-Present"
+              data-poster="/assets/tvshows/thepenguin.webp"
+              data-video="/assets/videos/penguin.mp4"
+              onclick="showTVDetails(this)"
+            >
+              <img src="/assets/tvshows/thepenguin.webp" alt="The Penguin" />
               <div class="card-footer">
-                <div class="card-title">The Pinguin</div>
+                <div class="card-title">The Penguin</div>
                 <div class="card-details">
                   <span>Crime, Drama</span>
                   <span class="card-rating">2024-Present</span>
                 </div>
               </div>
             </div>
-            <div class="content-card">
+
+            <div
+              class="content-card"
+              data-title="Mr Robot"
+              data-genre="Drama, Sci-Fi"
+              data-year="2015-2019"
+              data-poster="/assets/tvshows/mrrobot.jpg"
+              data-video="/assets/videos/mrrobot.mp4"
+              onclick="showTVDetails(this)"
+            >
               <img src="/assets/tvshows/mrrobot.jpg" alt="Mr Robot" />
               <div class="card-footer">
                 <div class="card-title">Mr Robot</div>
@@ -189,7 +283,16 @@
                 </div>
               </div>
             </div>
-            <div class="content-card">
+
+            <div
+              class="content-card"
+              data-title="Dark"
+              data-genre="Mystery, Sci-Fi"
+              data-year="2017-2020"
+              data-poster="/assets/tvshows/dark.jpg"
+              data-video="/assets/videos/dark.mp4"
+              onclick="showTVDetails(this)"
+            >
               <img src="/assets/tvshows/dark.jpg" alt="Dark" />
               <div class="card-footer">
                 <div class="card-title">Dark</div>
@@ -199,7 +302,16 @@
                 </div>
               </div>
             </div>
-            <div class="content-card">
+
+            <div
+              class="content-card"
+              data-title="The Boys"
+              data-genre="Action, Comedy"
+              data-year="2019-Present"
+              data-poster="/assets/tvshows/theboys.avif"
+              data-video="/assets/videos/theboys.mp4"
+              onclick="showTVDetails(this)"
+            >
               <img src="/assets/tvshows/theboys.avif" alt="The Boys" />
               <div class="card-footer">
                 <div class="card-title">The Boys</div>
@@ -209,7 +321,16 @@
                 </div>
               </div>
             </div>
-            <div class="content-card">
+
+            <div
+              class="content-card"
+              data-title="You"
+              data-genre="Drama, Mystery"
+              data-year="2022-Present"
+              data-poster="/assets/tvshows/you.webp"
+              data-video="/assets/videos/you.mp4"
+              onclick="showTVDetails(this)"
+            >
               <img src="/assets/tvshows/you.webp" alt="You" />
               <div class="card-footer">
                 <div class="card-title">You</div>
@@ -221,7 +342,15 @@
             </div>
           </div>
           <div class="content-row">
-            <div class="content-card">
+            <div
+              class="content-card"
+              data-title="Wednesday"
+              data-genre="Comedy, Fantasy"
+              data-year="2022-Present"
+              data-poster="/assets/tvshows/wednesday.jpg"
+              data-video="/assets/videos/wednesday.mp4"
+              onclick="showTVDetails(this)"
+            >
               <img src="/assets/tvshows/wednesday.jpg" alt="Wednesday" />
               <div class="card-footer">
                 <div class="card-title">Wednesday</div>
@@ -231,7 +360,16 @@
                 </div>
               </div>
             </div>
-            <div class="content-card">
+
+            <div
+              class="content-card"
+              data-title="Rings of Power"
+              data-genre="Fantasy, Drama"
+              data-year="2022-Present"
+              data-poster="/assets/tvshows/ringsofpower.jpg"
+              data-video="/assets/videos/rop.mp4"
+              onclick="showTVDetails(this)"
+            >
               <img
                 src="/assets/tvshows/ringsofpower.jpg"
                 alt="Rings of Power"
@@ -244,7 +382,16 @@
                 </div>
               </div>
             </div>
-            <div class="content-card">
+
+            <div
+              class="content-card"
+              data-title="Loki"
+              data-genre="Sci-Fi, Action"
+              data-year="2021-Present"
+              data-poster="/assets/tvshows/loki.jpg"
+              data-video="/assets/videos/loki.mp4"
+              onclick="showTVDetails(this)"
+            >
               <img src="/assets/tvshows/loki.jpg" alt="Loki" />
               <div class="card-footer">
                 <div class="card-title">Loki</div>
@@ -254,7 +401,16 @@
                 </div>
               </div>
             </div>
-            <div class="content-card">
+
+            <div
+              class="content-card"
+              data-title="What If"
+              data-genre="Sci-Fi, Thriller"
+              data-year="2021-Present"
+              data-poster="/assets/tvshows/whatif.jpg"
+              data-video="/assets/videos/whatif.mp4"
+              onclick="showTVDetails(this)"
+            >
               <img src="/assets/tvshows/whatif.jpg" alt="What If" />
               <div class="card-footer">
                 <div class="card-title">What If</div>
@@ -264,7 +420,16 @@
                 </div>
               </div>
             </div>
-            <div class="content-card">
+
+            <div
+              class="content-card"
+              data-title="The Crown"
+              data-genre="Drama, History"
+              data-year="2016-2023"
+              data-poster="/assets/tvshows/crown.jpg"
+              data-video="/assets/videos/crown.mp4"
+              onclick="showTVDetails(this)"
+            >
               <img src="/assets/tvshows/crown.jpg" alt="The Crown" />
               <div class="card-footer">
                 <div class="card-title">The Crown</div>

@@ -18,25 +18,30 @@ document.addEventListener('DOMContentLoaded', function() {
     const slider = document.querySelector('.content-slider');
     const prevBtn = document.querySelector('.prev-btn');
     const nextBtn = document.querySelector('.next-btn');
-    const cardWidth = slider.querySelector('.content-card').offsetWidth;
-    const cardsToShow = 5;
-    let currentPosition = 0;
 
-    nextBtn.addEventListener('click', () => {
-        const maxScroll = slider.scrollWidth - slider.clientWidth;
-        currentPosition = Math.min(currentPosition + cardWidth * cardsToShow, maxScroll);
-        slider.scrollTo({
-            left: currentPosition,
-            behavior: 'smooth'
-        });
-    });
+    function scroll(direction) {
+        const cardWidth = slider.querySelector('.content-card').offsetWidth;
+        const gap = 20;
+        const visibleCards = 5;
+        const scrollAmount = (cardWidth + gap) * visibleCards;
+        
+        if (direction === 'next') {
+            slider.scrollLeft += scrollAmount;
+        } else {
+            slider.scrollLeft -= scrollAmount;
+        }
+    }
 
-    prevBtn.addEventListener('click', () => {
-        currentPosition = Math.max(currentPosition - cardWidth * cardsToShow, 0);
-        slider.scrollTo({
-            left: currentPosition,
-            behavior: 'smooth'
-        });
+    nextBtn.addEventListener('click', () => scroll('next'));
+    prevBtn.addEventListener('click', () => scroll('prev'));
+
+    // Show/hide buttons based on scroll position
+    slider.addEventListener('scroll', () => {
+        const isAtStart = slider.scrollLeft === 0;
+        const isAtEnd = slider.scrollLeft >= slider.scrollWidth - slider.clientWidth - 10;
+        
+        prevBtn.style.opacity = isAtStart ? '0' : '1';
+        nextBtn.style.opacity = isAtEnd ? '0' : '1';
     });
 
     //cards clickable
@@ -60,8 +65,9 @@ function showTVDetails(card) {
     const genre = encodeURIComponent(card.getAttribute('data-genre'));
     const year = card.getAttribute('data-year');
     const poster = encodeURIComponent(card.getAttribute('data-poster'));
+    const video = encodeURIComponent(card.getAttribute('data-video'));
     
-    window.location.href = `tvshow.html?title=${title}&genre=${genre}&year=${year}&poster=${poster}`;
+    window.location.href = `tvshow.html?title=${title}&genre=${genre}&year=${year}&poster=${poster}&video=${video}`;
 }
 
 function showContentDetails(card, type) {

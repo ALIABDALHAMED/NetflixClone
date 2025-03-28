@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const genre = urlParams.get('genre');
         const year = urlParams.get('year');
         const poster = urlParams.get('poster');
-        const videoUrl = urlParams.get('video');
+        const video = urlParams.get('video');
 
         if (!title || !genre || !year || !poster) {
             throw new Error('Missing required parameters');
@@ -14,11 +14,12 @@ document.addEventListener('DOMContentLoaded', function() {
         document.getElementById('movie-genre').textContent = decodeURIComponent(genre);
         document.getElementById('movie-year').textContent = year;
         document.getElementById('movie-poster').src = decodeURIComponent(poster);
-        document.getElementById('movie-trailer').src = decodeURIComponent(videoUrl);
+        document.getElementById('video-source').src = decodeURIComponent(video);
+        document.getElementById('movie-trailer').load();
         document.title = `Netflix - ${decodeURIComponent(title)}`;
 
         document.getElementById('movie-plot').textContent = 
-            `placeholder for ${decodeURIComponent(title)}`;
+            `This is a placeholder description for ${decodeURIComponent(title)}.`;
     } catch (error) {
         console.error('Error loading movie details:', error);
         window.location.href = 'MoviePage.html';
