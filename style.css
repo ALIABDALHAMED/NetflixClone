@@ -253,7 +253,7 @@ header {
 
 /* Sign In Page */
 .signin-container {
-  background: rgba(0, 0, 0, 0.35);
+  background: transparent;
   padding: 60px 68px 40px;
   border-radius: 20px;
   min-height: 660px;
