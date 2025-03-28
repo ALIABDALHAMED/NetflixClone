@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function() {
         document.title = `Netflix - ${decodeURIComponent(title)}`;
 
         document.getElementById('movie-plot').textContent = 
-            `This is a placeholder description for ${decodeURIComponent(title)}. In a real application, this would be fetched from a movie database API.`;
+            `placeholder for ${decodeURIComponent(title)}. انا زهقت يجدعان.`;
     } catch (error) {
         console.error('Error loading movie details:', error);
         // Redirect to movies page if there's an error
