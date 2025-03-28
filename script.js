@@ -38,4 +38,35 @@ document.addEventListener('DOMContentLoaded', function() {
             behavior: 'smooth'
         });
     });
+
+    //cards clickable
+    const contentCards = document.querySelectorAll('.content-card');
+    contentCards.forEach(card => {
+        card.style.cursor = 'pointer';
+    });
 });
+function showMovieDetails(card) {
+    const title = encodeURIComponent(card.getAttribute('data-title'));
+    const genre = encodeURIComponent(card.getAttribute('data-genre'));
+    const year = card.getAttribute('data-year');
+    const poster = encodeURIComponent(card.getAttribute('data-poster'));
+    
+    window.location.href = `movie.html?title=${title}&genre=${genre}&year=${year}&poster=${poster}`;
+}
+
+function showTVDetails(card) {
+    const title = encodeURIComponent(card.getAttribute('data-title'));
+    const genre = encodeURIComponent(card.getAttribute('data-genre'));
+    const year = card.getAttribute('data-year');
+    const poster = encodeURIComponent(card.getAttribute('data-poster'));
+    
+    window.location.href = `tvshow.html?title=${title}&genre=${genre}&year=${year}&poster=${poster}`;
+}
+
+function showContentDetails(card, type) {
+    if (type === 'movie') {
+        showMovieDetails(card);
+    } else {
+        showTVDetails(card);
+    }
+}

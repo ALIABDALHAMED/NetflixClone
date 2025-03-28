@@ -63,7 +63,15 @@
         </button>
         <div class="content-slider">
           <div class="content-row">
-            <div class="content-card">
+            <div
+              class="content-card"
+              data-type="movie"
+              data-title="Oppenheimer"
+              data-genre="Biography, Drama"
+              data-year="2023"
+              data-poster="/assets/movies/oppenheimer.webp"
+              onclick="showContentDetails(this, 'movie')"
+            >
               <img src="/assets/movies/oppenheimer.webp" alt="Oppenheimer" />
               <div class="card-footer">
                 <div class="card-title">Oppenheimer</div>
@@ -73,7 +81,15 @@
                 </div>
               </div>
             </div>
-            <div class="content-card">
+            <div
+              class="content-card"
+              data-type="tv"
+              data-title="House Of The Dragon"
+              data-genre="Fantasy, Drama"
+              data-year="2022-Present"
+              data-poster="/assets/tvshows/houseofthedragon.jpg"
+              onclick="showContentDetails(this, 'tv')"
+            >
               <img
                 src="/assets/tvshows/houseofthedragon.jpg"
                 alt="House of the Dragon"

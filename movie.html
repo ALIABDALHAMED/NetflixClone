@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Netflix - Movie Details</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/png" href="/assets/netflix.png" />
+  </head>
+  <body>
+    <header>
+      <a href="index.html" class="logo">
+        <img src="/assets/netflix logo.png" alt="Netflix" />
+      </a>
+      <div class="nav-buttons">
+        <button
+          class="about-btn"
+          onclick="window.location.href='AboutUsPage.html'"
+        >
+          About Us <i class="bx bxs-upside-down"></i>
+        </button>
+        <button
+          class="movies-btn"
+          onclick="window.location.href='MoviePage.html'"
+        >
+          Movies <i class="bx bxs-movie-play"></i>
+        </button>
+        <button
+          class="tv-shows-btn"
+          onclick="window.location.href='TvShowPage.html'"
+        >
+          TV Shows <i class="bx bxs-tv"></i>
+        </button>
+        <button class="sign-in" onclick="window.location.href='signin.html'">
+          Sign In <i class="bx bxs-user-circle"></i>
+        </button>
+      </div>
+    </header>
+
+    <div class="hero">
+      <div class="movie-details">
+        <div class="movie-poster">
+          <img id="movie-poster" src="" alt="Movie Poster" class="loading" />
+        </div>
+        <div class="movie-info">
+          <h1 id="movie-title"></h1>
+          <div class="movie-metadata">
+            <span id="movie-genre"></span>
+            <span id="movie-year"></span>
+            <span id="movie-rating">Rating: 8.5/10</span>
+          </div>
+          <div class="movie-description">
+            <p id="movie-plot">Loading movie details...</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="footer-content">
+        <p>Questions? Call +201100123640</p>
+        <div class="footer-links">
+          <a href="AboutUsPage.html" target="_blank">Team Members</a>
+          <a href="/404_page/Error.html" target="_blank">Help Center</a>
+          <a href="/404_page/Error.html" target="_blank">Account</a>
+          <a href="/404_page/Error.html" target="_blank">Media Center</a>
+          <a href="/404_page/Error.html" target="_blank">FAQ</a>
+          <a href="/404_page/Error.html" target="_blank">Jobs</a>
+          <a href="/404_page/Error.html" target="_blank">Ways to Watch</a>
+          <a href="/404_page/Error.html" target="_blank">Terms of Use</a>
+          <a href="/404_page/Error.html" target="_blank">Privacy</a>
+          <a href="/404_page/Error.html" target="_blank">Cookie Preferences</a>
+          <a href="/404_page/Error.html" target="_blank">Corporate Information</a>
+          <a href="/404_page/Error.html" target="_blank">Contact Us</a>
+          <a href="https://fast.com/" target="_blank">Speed Test</a>
+          <a href="/404_page/Error.html" target="_blank">Legal Notices</a>
+          <a href="/404_page/Error.html" target="_blank">Only on Netflix</a>
+        </div>
+        <div class="footer-bottom">
+          <select>
+            <option value="en">English</option>
+            <option value="ar">العربية</option>
+          </select>
+          <span>Netflix EELU</span>
+        </div>
+      </div>
+    </footer>
+
+    <script src="movieDetails.js"></script>
+  </body>
+</html>
