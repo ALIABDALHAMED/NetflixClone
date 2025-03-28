@@ -10,14 +10,12 @@ document.getElementById('signin-form').addEventListener('submit', (e) => {
         return;
     }
     
-    // validate email
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(email)) {
         showError('Please enter a valid email address.');
         return;
     }
     
-    // validate password
     if (password.length < 8) {
         showError('Password must be at least 8 characters long.');
         return;

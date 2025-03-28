@@ -452,30 +452,35 @@ header {
 
 .content-card img {
   width: 100%;
-  height: 350px;
+  height: 380px;
   object-fit: cover;
 }
 
 .card-footer {
-  padding: 15px;
-  height: 80px;
+  padding: 20px;
+  height: auto;
 }
 
 .card-title {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   font-weight: bold;
-  margin-bottom: 8px;
+  margin-bottom: 12px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
 .card-details {
-  font-size: 0.9rem;
+  font-size: 1rem;
   color: #999;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 0 5px;
+}
+
+.card-details span {
+  padding: 0 5px;
 }
 
 .card-rating {
@@ -483,6 +488,7 @@ header {
   font-weight: bold;
 }
 
+/* Trending Section */
 .trending-section {
   padding: 50px 4%;
   background: rgba(0, 0, 0, 0.6);
@@ -508,12 +514,9 @@ header {
 }
 
 .content-slider .content-row {
-  gap: 15px;
-  padding: 0 5px;
-}
-
-.content-slider .content-card {
-  flex: 0 0 250px;
+  display: flex;
+  gap: 20px;
+  transition: transform 0.5s ease;
 }
 
 .slider-btn {
@@ -550,7 +553,12 @@ header {
   right: 20px;
 }
 
-/* Movie Details Page Styles */
+.content-slider .content-card {
+  flex-shrink: 0;
+  width: calc((100% - 80px) / 5);
+}
+
+/* Movie Details Page */
 .movie-details {
   display: flex;
   gap: 40px;
@@ -590,86 +598,25 @@ header {
   color: #999;
 }
 
-.movie-metadata span {
-  /* Removed hover background change */
-}
-
 .movie-description {
   color: #fff;
   line-height: 1.6;
   font-size: 1.1rem;
 }
 
-/* Add responsive design */
+/* Media Queries */
 @media (max-width: 1200px) {
-  .movie-details {
-    margin: 120px 20px;
-    padding: 40px;
+  .content-card {
+    max-width: calc(20% - 16px);
   }
 }
 
-@media (max-width: 900px) {
-  .movie-details {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+@media (max-width: 992px) {
+  .content-grid {
+    padding: 10px;
   }
 
-  .movie-poster {
-    flex: 0 0 auto;
-    max-width: 300px;
-  }
-
-  .movie-metadata {
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-
-  .movie-info h1 {
-    font-size: 2.5rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .movie-details {
-    padding: 20px;
-    margin: 100px 10px;
-  }
-
-  .movie-info h1 {
-    font-size: 2rem;
-  }
-
-  .movie-metadata {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .movie-description {
-    font-size: 1.1rem;
-    padding: 15px;
-  }
-}
-
-/* Remove any loading or hover animations */
-.loading::after {
-  display: none;
-}
-
-.movie-poster::after {
-  display: none;
-}
-
-/* Style updates for the hero section on movie details page */
-.hero {
-  min-height: 100vh;
-  padding-bottom: 60px;
-}
-
-/* Add responsive adjustments */
-@media (max-width: 1400px) {
   .content-row {
-    justify-content: center;
-    flex-wrap: wrap;
+    gap: 15px;
   }
 }
