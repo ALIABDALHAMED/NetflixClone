@@ -50,8 +50,9 @@ function showMovieDetails(card) {
     const genre = encodeURIComponent(card.getAttribute('data-genre'));
     const year = card.getAttribute('data-year');
     const poster = encodeURIComponent(card.getAttribute('data-poster'));
+    const video = encodeURIComponent(card.getAttribute('data-video'));
     
-    window.location.href = `movie.html?title=${title}&genre=${genre}&year=${year}&poster=${poster}`;
+    window.location.href = `movie.html?title=${title}&genre=${genre}&year=${year}&poster=${poster}&video=${video}`;
 }
 
 function showTVDetails(card) {
