@@ -5,9 +5,9 @@ window.addEventListener('scroll', () => {
 document.querySelector(".get-started").addEventListener("click", () => {
     const email = document.querySelector("input").value;
     if (email) {
-        alert("Welcome to Netflix! Email: " + email);
+        alert("Welcome to EELU! Email: " + email);
     } else {
-        alert("Please enter a valid email address.");
+        alert("enter a valid email");
     }
 });
 document.querySelector(".sign-in").addEventListener("click", () => {
