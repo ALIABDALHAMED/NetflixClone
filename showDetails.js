@@ -15,5 +15,5 @@ document.addEventListener('DOMContentLoaded', function() {
     document.title = `Netflix - ${decodeURIComponent(title)}`;
 
     document.getElementById('show-plot').textContent = 
-        `This is a placeholder description for ${decodeURIComponent(title)}`;
+        `placeholder for ${decodeURIComponent(title)}`;
 }); 
