@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Netflix Clone</title>
+    <link rel="stylesheet" href="/Css/style.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/png" href="/assets/netflix.png" />
+  </head>
+  <body>
+    <header>
+      <a href="/HTML/index.html" class="logo">
+        <img src="/assets/netflix logo.png" alt="Netflix" />
+      </a>
+      <div class="nav-buttons">
+        <button
+          class="about-btn"
+          onclick="window.location.href='AboutUsPage.html'"
+        >
+          About Us <i class="bx bxs-upside-down"></i>
+        </button>
+        <button
+          class="movies-btn"
+          onclick="window.location.href='MoviePage.html'"
+        >
+          Movies <i class="bx bxs-movie-play"></i>
+        </button>
+        <button
+          class="tv-shows-btn"
+          onclick="window.location.href='TvShowPage.html'"
+        >
+          TV Shows <i class="bx bxs-tv"></i>
+        </button>
+        <button class="sign-in" onclick="window.location.href='signin.html'">
+          Sign In <i class="bx bxs-user-circle"></i>
+        </button>
+      </div>
+    </header>
+
+    <div class="hero">
+      <div class="content">
+        <h2>Unlimited movies, TV <br />shows, and more</h2>
+        <p>Starts at EGP 100. Cancel anytime.</p>
+        <p>
+          Ready to watch? Enter your email to create or restart your membership.
+        </p>
+        <div class="email-box">
+          <input type="email" placeholder="example:2300424@student.eelu.edu.eg" />
+          <button class="get-started">Get Started</button>
+        </div>
+      </div>
+    </div>
+
+    <section class="trending-section">
+      <h1>Trending Now</h1>
+      <div class="slider-container">
+        <button class="slider-btn prev-btn">←</button>
+        <div class="content-slider">
+          <div
+            class="content-card"
+            onclick="showMovieDetails(this)"
+            data-title="Oppenheimer"
+            data-genre="Biography, Drama"
+            data-year="2023"
+            data-poster="/assets/movies/oppenheimer.webp"
+            data-video="/assets/Vid_assets/Oppenheimer.mp4"
+          >
+            <img src="/assets/movies/oppenheimer.webp" alt="Oppenheimer" />
+            <div class="card-footer">
+              <h3>Oppenheimer</h3>
+              <p>Biography, Drama • 2023</p>
+            </div>
+          </div>
+
+          <div
+            class="content-card"
+            onclick="showTVDetails(this)"
+            data-title="House Of The Dragon"
+            data-genre="Action, Fantasy"
+            data-year="2022"
+            data-poster="/assets/tvshows/houseofthedragon.jpg"
+            data-video="/assets/Vid_assets/HouseoftheDragon.mp4"
+          >
+            <img
+              src="/assets/tvshows/houseofthedragon.jpg"
+              alt="House Of The Dragon"
+            />
+            <div class="card-footer">
+              <h3>House Of The Dragon</h3>
+              <p>Action, Fantasy • 2022</p>
+            </div>
+          </div>
+
+          <div
+            class="content-card"
+            onclick="showMovieDetails(this)"
+            data-title="The Batman"
+            data-genre="Action, Crime"
+            data-year="2022"
+            data-poster="/assets/movies/thebatman.jpg"
+            data-video="/assets/Vid_assets/TheBatman.mp4"
+          >
+            <img src="/assets/movies/thebatman.jpg" alt="The Batman" />
+            <div class="card-footer">
+              <h3>The Batman</h3>
+              <p>Action, Crime • 2022</p>
+            </div>
+          </div>
+
+          <div
+          class="content-card"
+          onclick="showMovieDetails(this)"
+          data-title="Harry Potter and the Deathly Hallows"
+          data-genre="Fantasy, Adventure"
+          data-year="2011"
+          data-poster="/assets/movies/harrypotter.jpg"
+          data-video="/assets/Vid_assets/HarryPotterandtheDeathlyHallows.mp4"
+        >
+          <img
+            src="/assets/movies/harrypotter.jpg"
+            alt="Harry Potter and the Deathly Hallows"
+          />
+          <div class="card-footer">
+            <h3>Harry Potter and the Deathly Hallows</h3>
+            <p>Fantasy, Adventure • 2011</p>
+          </div>
+        </div>
+
+        <div
+        class="content-card"
+        onclick="showMovieDetails(this)"
+        data-title="Thor: Ragnarok"
+        data-genre="Action, Fantasy"
+        data-year="2017"
+        data-poster="/assets/movies/ragnarock.jpg"
+        data-video="/assets/Vid_assets/ThorRagnarok.mp4"
+      >
+        <img src="/assets/movies/ragnarock.jpg" alt="Thor: Ragnarok" />
+        <div class="card-footer">
+          <h3>Thor: Ragnarok</h3>
+          <p>Action, Fantasy • 2017</p>
+        </div>
+      </div>
+
+          <div
+            class="content-card"
+            onclick="showTVDetails(this)"
+            data-title="The Last of Us"
+            data-genre="Drama, Horror"
+            data-year="2023"
+            data-poster="/assets/tvshows/thelastofus.webp"
+            data-video="/assets/Vid_assets/TheLastofUs.mp4"
+          >
+            <img src="/assets/tvshows/thelastofus.webp" alt="The Last of Us" />
+            <div class="card-footer">
+              <h3>The Last of Us</h3>
+              <p>Drama, Horror • 2023</p>
+            </div>
+          </div>
+        
+          <div
+            class="content-card"
+            onclick="showMovieDetails(this)"
+            data-title="Inception"
+            data-genre="Sci-Fi, Action"
+            data-year="2010"
+            data-poster="/assets/movies/inception.jpg"
+            data-video="/assets/Vid_assets/Inception.mp4"
+          >
+            <img src="/assets/movies/inception.jpg" alt="Inception" />
+            <div class="card-footer">
+              <h3>Inception</h3>
+              <p>Sci-Fi, Action • 2010</p>
+            </div>
+          </div>
+
+          <div
+            class="content-card"
+            onclick="showTVDetails(this)"
+            data-title="Game of Thrones"
+            data-genre="Fantasy, Drama"
+            data-year="2011-2019"
+            data-poster="/assets/tvshows/gameofthrones.jpg"
+            data-video="/assets/Vid_assets/GameofThronesOpeningCredits.mp4"
+          >
+            <img
+              src="/assets/tvshows/gameofthrones.jpg"
+              alt="Game of Thrones"
+            />
+            <div class="card-footer">
+              <h3>Game of Thrones</h3>
+              <p>Fantasy, Drama • 2011-2019</p>
+            </div>
+          </div>
+
+          <div
+            class="content-card"
+            onclick="showMovieDetails(this)"
+            data-title="Interstellar"
+            data-genre="Sci-Fi, Adventure"
+            data-year="2014"
+            data-poster="/assets/movies/interstellar.jpg"
+            data-video="/assets/Vid_assets/Interstellar.mp4"
+          >
+            <img src="/assets/movies/interstellar.jpg" alt="Interstellar" />
+            <div class="card-footer">
+              <h3>Interstellar</h3>
+              <p>Sci-Fi, Adventure • 2014</p>
+            </div>
+          </div>
+
+          <div
+            class="content-card"
+            onclick="showTVDetails(this)"
+            data-title="Breaking Bad"
+            data-genre="Crime, Drama"
+            data-year="2008-2013"
+            data-poster="/assets/tvshows/breakingbad.jpg"
+            data-video="/assets/Vid_assets/BreakingBad.mp4"
+          >
+            <img src="/assets/tvshows/breakingbad.jpg" alt="Breaking Bad" />
+            <div class="card-footer">
+              <h3>Breaking Bad</h3>
+              <p>Crime, Drama • 2008-2013</p>
+            </div>
+          </div>
+        </div>
+        <button class="slider-btn next-btn">→</button>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-content">
+        <p>Questions? Call +201100123640</p>
+        <div class="footer-links">
+          <a href="/HTML/AboutUsPage.html" target="_blank">Team Members</a>
+          <a href="/404_page/Error.html" target="_blank">Help Center</a>
+          <a href="/404_page/Error.html" target="_blank">Account</a>
+          <a href="/404_page/Error.html" target="_blank">Media Center</a>
+          <a href="/404_page/Error.html" target="_blank">FAQ</a>
+          <a href="/404_page/Error.html" target="_blank">Jobs</a>
+          <a href="/404_page/Error.html" target="_blank">Ways to Watch</a>
+          <a href="/404_page/Error.html" target="_blank">Terms of Use</a>
+          <a href="/404_page/Error.html" target="_blank">Privacy</a>
+          <a href="/404_page/Error.html" target="_blank">Cookie Preferences</a>
+          <a href="/404_page/Error.html" target="_blank"
+            >Corporate Information</a
+          >
+          <a href="/404_page/Error.html" target="_blank">Contact Us</a>
+          <a href="https://fast.com/" target="_blank">Speed Test</a>
+          <a href="/404_page/Error.html" target="_blank">Legal Notices</a>
+          <a href="/404_page/Error.html" target="_blank">Only on EELU</a>
+        </div>
+        <div class="footer-bottom">
+          <select>
+            <option value="en">English</option>
+            <option value="ar">العربية</option>
+          </select>
+          <span>Netflix EELU</span>
+        </div>
+      </div>
+    </footer>
+
+    <script src="/JavaScript/script.js"></script>
+  </body>
+</html>
