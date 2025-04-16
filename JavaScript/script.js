@@ -21,8 +21,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function scroll(direction) {
         const cardWidth = slider.querySelector('.content-card').offsetWidth;
-        const gap = 20;
-        const visibleCards = 5;
+        const gap = 15;
+        const visibleCards = 3;
         const scrollAmount = (cardWidth + gap) * visibleCards;
         
         if (direction === 'next') {
@@ -77,3 +77,12 @@ function showContentDetails(card, type) {
         showTVDetails(card);
     }
 }
+
+function toggleMenu() {
+    const menu = document.querySelector('.menu');
+    if (menu.style.display === 'block') {
+      menu.style.display = 'none';
+    } else {
+      menu.style.display = 'block';
+    }
+  }

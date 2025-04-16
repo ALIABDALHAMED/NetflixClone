@@ -13,26 +13,29 @@
   </head>
   <body>
     <header>
-      <a href="/HTML/index.html" class="logo">
+      <div class="nav-menu">
+        <button class="menu-toggle" onclick="toggleMenu()" style="color: red;">☰</button>
+        <ul class="menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="AboutUsPage.html">About Us</a></li>
+          <li><a href="MoviePage.html">Movies</a></li>
+          <li><a href="TvShowPage.html">TV Shows</a></li>
+          <li><a href="signin.html">Sign In</a></li>
+          <li><a href="AboutUsPage.html">Team</a></li>
+          <li><a href="https://www.eelu.edu.eg">EELU</a></li>
+        </ul>
+      </div>
+      <a href="index.html" class="logo">
         <img src="/assets/netflix logo.png" alt="Netflix" />
       </a>
       <div class="nav-buttons">
-        <button
-          class="about-btn"
-          onclick="window.location.href='AboutUsPage.html'"
-        >
+        <button class="about-btn" onclick="window.location.href='AboutUsPage.html'">
           About Us <i class="bx bxs-upside-down"></i>
         </button>
-        <button
-          class="movies-btn"
-          onclick="window.location.href='MoviePage.html'"
-        >
+        <button class="movies-btn" onclick="window.location.href='MoviePage.html'">
           Movies <i class="bx bxs-movie-play"></i>
         </button>
-        <button
-          class="tv-shows-btn"
-          onclick="window.location.href='TvShowPage.html'"
-        >
+        <button class="tv-shows-btn" onclick="window.location.href='TvShowPage.html'">
           TV Shows <i class="bx bxs-tv"></i>
         </button>
         <button class="sign-in" onclick="window.location.href='signin.html'">
