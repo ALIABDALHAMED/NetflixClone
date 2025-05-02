@@ -1,16 +1,14 @@
-/* Reset and Base Styles */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
-
+/*Hide the scrollbar*/
 ::-webkit-scrollbar {
   display: none;
 }
 
-/*Hide the scrollbar*/
 * {
   -ms-overflow-style: none;
   scrollbar-width: none;
@@ -258,7 +256,7 @@ header {
   min-height: 660px;
   width: 450px;
   margin: 0 auto;
-  box-shadow: 0 0 20px 0 rgba(17, 135, 174, 0.5);
+  box-shadow: 0 0 20px 0 rgba(255, 255, 255, 0.5);
 }
 
 .signin-form h1 {
@@ -301,7 +299,7 @@ header {
 .signin-form button:hover {
   background: transparent;
   transform: scale(1.05);
-  box-shadow: 0 0 15px 0 rgba(17, 135, 174, 0.5);
+  box-shadow: 0 0 15px 0 rgba(255, 255, 255, 0.5);
 }
 
 .remember-me {
@@ -586,18 +584,6 @@ header {
   right: 0;
 }
 
-@media (max-width: 768px) {
-  .content-card {
-    flex: 0 0 calc(33.333% - 16px);
-  }
-}
-
-@media (max-width: 480px) {
-  .content-card {
-    flex: 0 0 calc(50% - 16px);
-  }
-}
-
 /* Movie Details Page */
 .movie-details {
   display: flex;
@@ -669,22 +655,6 @@ header {
 }
 
 /* Media Queries */
-@media (max-width: 1200px) {
-  .content-card {
-    max-width: calc(20% - 16px);
-  }
-}
-
-@media (max-width: 992px) {
-  .content-grid {
-    padding: 10px;
-  }
-
-  .content-row {
-    gap: 15px;
-  }
-}
-
 .team-section {
   padding: 50px 4%;
   background: rgba(0, 0, 0, 0.7);
@@ -748,87 +718,4 @@ header {
   padding: 8px 15px;
   border-radius: 10px;
   display: inline-block;
-}
-
-/* Responsive Design */
-@media (max-width: 1024px) {
-  .team-container {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
-  }
-
-  .member-info h3 {
-    font-size: 1.8rem;
-  }
-
-  .member-info .id {
-    font-size: 1.3rem;
-  }
-
-  .member-info .email {
-    font-size: 1.1rem;
-  }
-}
-
-@media (max-width: 640px) {
-  .team-container {
-    grid-template-columns: 1fr;
-  }
-}
-
-.nav-menu {
-  position: absolute;
-  float: left;
-  margin-top: 170px;
-
-}
-
-.menu-toggle {
-  background-color: transparent;
-  color: white;
-  border: none;
-  padding: 10px;
-  cursor: pointer;
-  font-size: 40px;
-  width: 90px;
-}
-.menu-toggle :hover{
-  color: #ff0000;
-  background-color: #e50914;
-}
-
-.menu {
-  display: none;
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  position: absolute;
-  left: 0;
-  top: 70px;
-  background-color: transparent;
-  z-index: 1000;
-  width: 100px;
-  border-radius: 5px;
-  text-align: center;
-}
-
-.menu li {
-  margin: 0;
-  margin-top: 30px;
-}
-
-.menu a {
-  color: white;
-  text-decoration: none;
-  display: block;
-  padding: 10px;
-  transition: .4s;
-  border-radius: 50px;
-
-}
-
-.menu a:hover {
-  background-color: #b96510;
-  color: #f0f0f0;
-  transform: scale(1.2);
 }

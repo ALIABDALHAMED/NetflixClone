@@ -13,7 +13,6 @@ document.querySelector(".get-started").addEventListener("click", () => {
 document.querySelector(".sign-in").addEventListener("click", () => {
     window.location.href = "signin.html";
 });
-
 document.addEventListener('DOMContentLoaded', function() {
     const slider = document.querySelector('.content-slider');
     const prevBtn = document.querySelector('.prev-btn');
@@ -21,8 +20,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function scroll(direction) {
         const cardWidth = slider.querySelector('.content-card').offsetWidth;
-        const gap = 15;
-        const visibleCards = 3;
+        const gap = 10;
+        const visibleCards = 2;
         const scrollAmount = (cardWidth + gap) * visibleCards;
         
         if (direction === 'next') {
@@ -31,19 +30,16 @@ document.addEventListener('DOMContentLoaded', function() {
             slider.scrollLeft -= scrollAmount;
         }
     }
-
     nextBtn.addEventListener('click', () => scroll('next'));
     prevBtn.addEventListener('click', () => scroll('prev'));
 
-    // Show/hide buttons based on scroll position
+    // Show-hide =><= buttons
     slider.addEventListener('scroll', () => {
         const isAtStart = slider.scrollLeft === 0;
         const isAtEnd = slider.scrollLeft >= slider.scrollWidth - slider.clientWidth - 10;
-        
         prevBtn.style.opacity = isAtStart ? '0' : '1';
         nextBtn.style.opacity = isAtEnd ? '0' : '1';
     });
-
     //cards clickable
     const contentCards = document.querySelectorAll('.content-card');
     contentCards.forEach(card => {
@@ -59,7 +55,6 @@ function showMovieDetails(card) {
     
     window.location.href = `movie.html?title=${title}&genre=${genre}&year=${year}&poster=${poster}&video=${video}`;
 }
-
 function showTVDetails(card) {
     const title = encodeURIComponent(card.getAttribute('data-title'));
     const genre = encodeURIComponent(card.getAttribute('data-genre'));
@@ -69,7 +64,6 @@ function showTVDetails(card) {
     
     window.location.href = `tvshow.html?title=${title}&genre=${genre}&year=${year}&poster=${poster}&video=${video}`;
 }
-
 function showContentDetails(card, type) {
     if (type === 'movie') {
         showMovieDetails(card);
@@ -77,12 +71,3 @@ function showContentDetails(card, type) {
         showTVDetails(card);
     }
 }
-
-function toggleMenu() {
-    const menu = document.querySelector('.menu');
-    if (menu.style.display === 'block') {
-      menu.style.display = 'none';
-    } else {
-      menu.style.display = 'block';
-    }
-  }
