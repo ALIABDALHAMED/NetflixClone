@@ -11,7 +11,7 @@ document.querySelector(".get-started").addEventListener("click", () => {
     }
 });
 document.querySelector(".sign-in").addEventListener("click", () => {
-    window.location.href = "signin.html";
+    window.location.href = "HTML/signin.html";
 });
 document.addEventListener('DOMContentLoaded', function() {
     const slider = document.querySelector('.content-slider');
@@ -46,28 +46,17 @@ document.addEventListener('DOMContentLoaded', function() {
         card.style.cursor = 'pointer';
     });
 });
-function showMovieDetails(card) {
+function showDetails(card) {
     const title = encodeURIComponent(card.getAttribute('data-title'));
     const genre = encodeURIComponent(card.getAttribute('data-genre'));
     const year = card.getAttribute('data-year');
     const poster = encodeURIComponent(card.getAttribute('data-poster'));
-    const video = encodeURIComponent(card.getAttribute('data-video'));
+    const video = encodeURIComponent(card.getAttribute('data-video') || '');
     
-    window.location.href = `movie.html?title=${title}&genre=${genre}&year=${year}&poster=${poster}&video=${video}`;
-}
-function showTVDetails(card) {
-    const title = encodeURIComponent(card.getAttribute('data-title'));
-    const genre = encodeURIComponent(card.getAttribute('data-genre'));
-    const year = card.getAttribute('data-year');
-    const poster = encodeURIComponent(card.getAttribute('data-poster'));
-    const video = encodeURIComponent(card.getAttribute('data-video'));
+    // Determine if we're on the movie or TV show page
+    const currentPage = window.location.pathname;
+    const isMoviePage = currentPage.includes('MoviePage.html');
+    const targetPage = isMoviePage ? 'movie.html' : 'tvshow.html';
     
-    window.location.href = `tvshow.html?title=${title}&genre=${genre}&year=${year}&poster=${poster}&video=${video}`;
-}
-function showContentDetails(card, type) {
-    if (type === 'movie') {
-        showMovieDetails(card);
-    } else {
-        showTVDetails(card);
-    }
+    window.location.href = `${targetPage}?title=${title}&genre=${genre}&year=${year}&poster=${poster}&video=${video}`;
 }

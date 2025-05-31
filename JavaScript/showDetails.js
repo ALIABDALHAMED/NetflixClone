@@ -9,6 +9,15 @@ document.addEventListener('DOMContentLoaded', function() {
         document.getElementById('show-genre').textContent = decodeURIComponent(genre);
         document.getElementById('show-year').textContent = year;
         document.getElementById('show-poster').src = decodeURIComponent(poster);
-        document.getElementById('video-source').src = decodeURIComponent(video);
-        document.getElementById('show-trailer').load();
+        
+        const videoSource = document.getElementById('video-source');
+        const showTrailer = document.getElementById('show-trailer');
+        
+        if (video) {
+            videoSource.src = decodeURIComponent(video);
+            showTrailer.load();
+        } else {
+            const videoContainer = document.querySelector('.video-container');
+            videoContainer.innerHTML = '<p class="no-video-message">Trailer not available</p>';
+        }
 }); 

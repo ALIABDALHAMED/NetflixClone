@@ -9,6 +9,15 @@ document.addEventListener('DOMContentLoaded', function() {
         document.getElementById('movie-genre').textContent = decodeURIComponent(genre);
         document.getElementById('movie-year').textContent = year;
         document.getElementById('movie-poster').src = decodeURIComponent(poster);
-        document.getElementById('video-source').src = decodeURIComponent(video);
-        document.getElementById('movie-trailer').load();
+        
+        const videoSource = document.getElementById('video-source');
+        const movieTrailer = document.getElementById('movie-trailer');
+        
+        if (video) {
+            videoSource.src = decodeURIComponent(video);
+            movieTrailer.load();
+        } else {
+            const videoContainer = document.querySelector('.video-container');
+            videoContainer.innerHTML = '<p class="no-video-message">Trailer not available</p>';
+        }
 }); 

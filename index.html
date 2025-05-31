@@ -1,33 +1,32 @@
-git config --global user.name "Your Name"
-git config --global user.email "your.email@example.com"<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Netflix Clone</title>
-    <link rel="stylesheet" href="/Css/style.css" />
+    <link rel="stylesheet" href="Css/style.css" />
     <link
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
     />
-    <link rel="icon" type="image/png" href="/assets/netflix.png" />
+    <link rel="icon" type="image/png" href="assets/netflix.png" />
   </head>
   <body>
     <header>
       <a href="index.html" class="logo">
-        <img src="/assets/netflix logo.png" alt="Netflix" />
+        <img src="assets/netflix logo.png" alt="Netflix" />
       </a>
       <div class="nav-buttons">
-        <button class="about-btn" onclick="window.location.href='AboutUsPage.html'">
+        <button class="about-btn" onclick="window.location.href='HTML/AboutUsPage.html'">
           About Us <i class="bx bxs-upside-down"></i>
         </button>
-        <button class="movies-btn" onclick="window.location.href='MoviePage.html'">
+        <button class="movies-btn" onclick="window.location.href='HTML/MoviePage.html'">
           Movies <i class="bx bxs-movie-play"></i>
         </button>
-        <button class="tv-shows-btn" onclick="window.location.href='TvShowPage.html'">
+        <button class="tv-shows-btn" onclick="window.location.href='HTML/TvShowPage.html'">
           TV Shows <i class="bx bxs-tv"></i>
         </button>
-        <button class="sign-in" onclick="window.location.href='signin.html'">
+        <button class="sign-in" onclick="window.location.href='HTML/signin.html'">
           Sign In <i class="bx bxs-user-circle"></i>
         </button>
       </div>
@@ -58,10 +57,10 @@ git config --global user.email "your.email@example.com"<!DOCTYPE html>
             data-title="Oppenheimer"
             data-genre="Biography, Drama"
             data-year="2023"
-            data-poster="/assets/movies/oppenheimer.webp"
-            data-video="/assets/Vid_assets/Oppenheimer.mp4"
+            data-poster="assets/movies/oppenheimer.webp"
+            data-video="assets/Vid_assets/Oppenheimer.mp4"
           >
-            <img src="/assets/movies/oppenheimer.webp" alt="Oppenheimer" />
+            <img src="assets/movies/oppenheimer.webp" alt="Oppenheimer" />
             <div class="card-footer">
               <h3>Oppenheimer</h3>
               <p>Biography, Drama • 2023</p>
@@ -74,11 +73,11 @@ git config --global user.email "your.email@example.com"<!DOCTYPE html>
             data-title="House Of The Dragon"
             data-genre="Action, Fantasy"
             data-year="2022"
-            data-poster="/assets/tvshows/houseofthedragon.jpg"
-            data-video="/assets/Vid_assets/HouseOfTheDragon.mp4"
+            data-poster="assets/tvshows/houseofthedragon.jpg"
+            data-video="assets/Vid_assets/HouseOfTheDragon.mp4"
           >
             <img
-              src="/assets/tvshows/houseofthedragon.jpg"
+              src="assets/tvshows/houseofthedragon.jpg"
               alt="House Of The Dragon"
             />
             <div class="card-footer">
@@ -93,10 +92,10 @@ git config --global user.email "your.email@example.com"<!DOCTYPE html>
             data-title="The Batman"
             data-genre="Action, Crime"
             data-year="2022"
-            data-poster="/assets/movies/thebatman.jpg"
-            data-video="/assets/Vid_assets/TheBatman.mp4"
+            data-poster="assets/movies/thebatman.jpg"
+            data-video="assets/Vid_assets/TheBatman.mp4"
           >
-            <img src="/assets/movies/thebatman.jpg" alt="The Batman" />
+            <img src="assets/movies/thebatman.jpg" alt="The Batman" />
             <div class="card-footer">
               <h3>The Batman</h3>
               <p>Action, Crime • 2022</p>
@@ -104,39 +103,39 @@ git config --global user.email "your.email@example.com"<!DOCTYPE html>
           </div>
 
           <div
-          class="content-card"
-          onclick="showMovieDetails(this)"
-          data-title="Harry Potter and the Deathly Hallows"
-          data-genre="Fantasy, Adventure"
-          data-year="2011"
-          data-poster="/assets/movies/harrypotter.jpg"
-          data-video="/assets/Vid_assets/HarryPotter.mp4"
-        >
-          <img
-            src="/assets/movies/harrypotter.jpg"
-            alt="Harry Potter and the Deathly Hallows"
-          />
-          <div class="card-footer">
-            <h3>Harry Potter and the Deathly Hallows</h3>
-            <p>Fantasy, Adventure • 2011</p>
+            class="content-card"
+            onclick="showMovieDetails(this)"
+            data-title="Harry Potter and the Deathly Hallows"
+            data-genre="Fantasy, Adventure"
+            data-year="2011"
+            data-poster="assets/movies/harrypotter.jpg"
+            data-video="assets/Vid_assets/HarryPotter.mp4"
+          >
+            <img
+              src="assets/movies/harrypotter.jpg"
+              alt="Harry Potter and the Deathly Hallows"
+            />
+            <div class="card-footer">
+              <h3>Harry Potter and the Deathly Hallows</h3>
+              <p>Fantasy, Adventure • 2011</p>
+            </div>
           </div>
-        </div>
 
-        <div
-        class="content-card"
-        onclick="showMovieDetails(this)"
-        data-title="Thor: Ragnarok"
-        data-genre="Action, Fantasy"
-        data-year="2017"
-        data-poster="/assets/movies/ragnarock.jpg"
-        data-video="/assets/Vid_assets/ThorRagnarok.mp4"
-      >
-        <img src="/assets/movies/ragnarock.jpg" alt="Thor: Ragnarok" />
-        <div class="card-footer">
-          <h3>Thor: Ragnarok</h3>
-          <p>Action, Fantasy • 2017</p>
-        </div>
-      </div>
+          <div
+            class="content-card"
+            onclick="showMovieDetails(this)"
+            data-title="Dunkirk"
+            data-genre="Action, Drama"
+            data-year="2017"
+            data-poster="assets/movies/dunkirk.jpg"
+            data-video="assets/Vid_assets/Dunkirk.mp4"
+          >
+            <img src="assets/movies/dunkirk.jpg" alt="Dunkirk" />
+            <div class="card-footer">
+              <h3>Dunkirk</h3>
+              <p>Action, Drama • 2017</p>
+            </div>
+          </div>
 
           <div
             class="content-card"
@@ -144,10 +143,9 @@ git config --global user.email "your.email@example.com"<!DOCTYPE html>
             data-title="The Last of Us"
             data-genre="Drama, Horror"
             data-year="2023"
-            data-poster="/assets/tvshows/thelastofus.webp"
-            data-video="/assets/Vid_assets/TheLastofUs.mp4"
+            data-poster="assets/tvshows/thelastofus.webp"
           >
-            <img src="/assets/tvshows/thelastofus.webp" alt="The Last of Us" />
+            <img src="assets/tvshows/thelastofus.webp" alt="The Last of Us" />
             <div class="card-footer">
               <h3>The Last of Us</h3>
               <p>Drama, Horror • 2023</p>
@@ -160,10 +158,9 @@ git config --global user.email "your.email@example.com"<!DOCTYPE html>
             data-title="Inception"
             data-genre="Sci-Fi, Action"
             data-year="2010"
-            data-poster="/assets/movies/inception.jpg"
-            data-video="/assets/Vid_assets/Inception.mp4"
+            data-poster="assets/movies/inception.jpg"
           >
-            <img src="/assets/movies/inception.jpg" alt="Inception" />
+            <img src="assets/movies/inception.jpg" alt="Inception" />
             <div class="card-footer">
               <h3>Inception</h3>
               <p>Sci-Fi, Action • 2010</p>
@@ -176,11 +173,11 @@ git config --global user.email "your.email@example.com"<!DOCTYPE html>
             data-title="Game of Thrones"
             data-genre="Fantasy, Drama"
             data-year="2011-2019"
-            data-poster="/assets/tvshows/gameofthrones.jpg"
-            data-video="/assets/Vid_assets/GameOfThrones.mp4"
+            data-poster="assets/tvshows/gameofthrones.jpg"
+            data-video="assets/Vid_assets/GameOfThrones.mp4"
           >
             <img
-              src="/assets/tvshows/gameofthrones.jpg"
+              src="assets/tvshows/gameofthrones.jpg"
               alt="Game of Thrones"
             />
             <div class="card-footer">
@@ -195,10 +192,9 @@ git config --global user.email "your.email@example.com"<!DOCTYPE html>
             data-title="Interstellar"
             data-genre="Sci-Fi, Adventure"
             data-year="2014"
-            data-poster="/assets/movies/interstellar.jpg"
-            data-video="/assets/Vid_assets/Interstellar.mp4"
+            data-poster="assets/movies/interstellar.jpg"
           >
-            <img src="/assets/movies/interstellar.jpg" alt="Interstellar" />
+            <img src="assets/movies/interstellar.jpg" alt="Interstellar" />
             <div class="card-footer">
               <h3>Interstellar</h3>
               <p>Sci-Fi, Adventure • 2014</p>
@@ -211,10 +207,9 @@ git config --global user.email "your.email@example.com"<!DOCTYPE html>
             data-title="Breaking Bad"
             data-genre="Crime, Drama"
             data-year="2008-2013"
-            data-poster="/assets/tvshows/breakingbad.jpg"
-            data-video="/assets/Vid_assets/BreakingBad.mp4"
+            data-poster="assets/tvshows/BreakingBad.jpg"
           >
-            <img src="/assets/tvshows/breakingbad.jpg" alt="Breaking Bad" />
+            <img src="assets/tvshows/BreakingBad.jpg" alt="Breaking Bad" />
             <div class="card-footer">
               <h3>Breaking Bad</h3>
               <p>Crime, Drama • 2008-2013</p>
@@ -229,23 +224,21 @@ git config --global user.email "your.email@example.com"<!DOCTYPE html>
       <div class="footer-content">
         <p>Questions? Call +201100123640</p>
         <div class="footer-links">
-          <a href="/HTML/AboutUsPage.html" target="_blank">Team Members</a>
-          <a href="/404_page/Error.html" target="_blank">Help Center</a>
-          <a href="/404_page/Error.html" target="_blank">Account</a>
-          <a href="/404_page/Error.html" target="_blank">Media Center</a>
-          <a href="/404_page/Error.html" target="_blank">FAQ</a>
-          <a href="/404_page/Error.html" target="_blank">Jobs</a>
-          <a href="/404_page/Error.html" target="_blank">Ways to Watch</a>
-          <a href="/404_page/Error.html" target="_blank">Terms of Use</a>
-          <a href="/404_page/Error.html" target="_blank">Privacy</a>
-          <a href="/404_page/Error.html" target="_blank">Cookie Preferences</a>
-          <a href="/404_page/Error.html" target="_blank"
-            >Corporate Information</a
-          >
-          <a href="/404_page/Error.html" target="_blank">Contact Us</a>
+          <a href="HTML/AboutUsPage.html">Team Members</a>
+          <a href="404_page/Error.html">Help Center</a>
+          <a href="404_page/Error.html">Account</a>
+          <a href="404_page/Error.html">Media Center</a>
+          <a href="404_page/Error.html">FAQ</a>
+          <a href="404_page/Error.html">Jobs</a>
+          <a href="404_page/Error.html">Ways to Watch</a>
+          <a href="404_page/Error.html">Terms of Use</a>
+          <a href="404_page/Error.html">Privacy</a>
+          <a href="404_page/Error.html">Cookie Preferences</a>
+          <a href="404_page/Error.html">Corporate Information</a>
+          <a href="404_page/Error.html">Contact Us</a>
           <a href="https://fast.com/" target="_blank">Speed Test</a>
-          <a href="/404_page/Error.html" target="_blank">Legal Notices</a>
-          <a href="/404_page/Error.html" target="_blank">Only on EELU</a>
+          <a href="404_page/Error.html">Legal Notices</a>
+          <a href="404_page/Error.html">Only on EELU</a>
         </div>
         <div class="footer-bottom">
           <select>
@@ -257,6 +250,6 @@ git config --global user.email "your.email@example.com"<!DOCTYPE html>
       </div>
     </footer>
 
-    <script src="/JavaScript/script.js"></script>
+    <script src="JavaScript/script.js"></script>
   </body>
 </html>
